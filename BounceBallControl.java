@@ -83,7 +83,7 @@ class BallPane extends Pane {
   public final double radius = 20;
   private double x = radius, y = radius;
   private double dx = 1, dy = 1;
-  ArrayList<Circle> cc=new ArrayList<Circle>();  
+  ArrayList<Circle> cc=new ArrayList<Circle>();//array list to know which ball  
   private Timeline animation;  
   public Circle c1 ;
   public Circle c2 ;
@@ -92,13 +92,13 @@ class BallPane extends Pane {
   public Circle c5 ;  
   public Circle c6 ;  
   public Circle c7 ; 
-  ArrayList<Integer> yax=new ArrayList<Integer>();
+  ArrayList<Integer> yax=new ArrayList<Integer>();//array list to know the y
 
   public BallPane() {      
     c1 = new Circle(x, y, radius);
     c1.setFill(Color.RED); // Set ball color
     getChildren().add(c1); // Place a ball into this pane
-    cc.add(c1);
+    cc.add(c1);//add to arraylist
     yax.add(50);    
     
     
@@ -185,6 +185,7 @@ class BallPane extends Pane {
     //y=50;
     
     int len=cc.size();
+    //for loop with arraylist
     for(i=0;i<len;i++){
         opc=cc.get(i);
         opc.setCenterX(x);
